@@ -1,0 +1,22 @@
+version = 1
+
+test_patterns = ["test/**"]
+
+exclude_patterns = [
+    ".circleci/**",
+    ".github/**",
+    ".vscode/**",
+    "assets/**",
+    "bin/**",
+    "build/**"
+]
+
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+  [analyzers.meta]
+  module_system = "es-modules"
+  environment = ["nodejs"]
+  plugins = ["react"]
+  dialect = "typescript"
